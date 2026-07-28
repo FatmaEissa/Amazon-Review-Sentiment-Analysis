@@ -1,136 +1,89 @@
-# 🛒 Amazon Review Intelligence Platform
+🛒 Amazon Review Intelligence
 
-🚀 **Enterprise Sentiment Analysis Platform powered by Fine-Tuned DistilBERT & Streamlit**
+<p align="center">
 
-An end-to-end AI platform that analyzes Amazon customer reviews using Natural Language Processing (NLP) and Deep Learning.
-The system provides real-time sentiment prediction and interactive analytics dashboards to understand customer feedback at scale.
+Enterprise Sentiment Analysis Platform powered by Fine-Tuned DistilBERT
 
----
+AI-powered web application for real-time Amazon review sentiment analysis using a fine-tuned DistilBERT Transformer model with an interactive Streamlit dashboard.
 
-## 🌟 Project Overview
+</p>
 
-**Amazon Review Intelligence** is an AI-powered sentiment analysis application designed to automatically classify customer reviews into:
+📌 Overview
 
-* ✅ Positive Sentiment
-* ❌ Negative Sentiment
+Amazon Review Intelligence is an end-to-end NLP application that automatically analyzes Amazon customer reviews and predicts whether the review is Positive or Negative.
 
-The platform uses a fine-tuned **DistilBERT Transformer model** trained on Amazon product reviews and deployed through an interactive Streamlit dashboard.
+The platform combines Deep Learning, Natural Language Processing, and interactive analytics to help understand customer feedback at scale.
 
----
+✨ Features
+🔮 AI Sentiment Prediction
+Fine-tuned DistilBERT model
+Real-time prediction
+Positive & Negative probabilities
+Confidence score
+Instant inference
+📊 Interactive Analytics Dashboard
+Total Reviews
+Average Rating
+Positive Review Percentage
+Average Review Length
+Star Rating Distribution
+Sentiment Distribution
+Review Length Analysis
+Most Frequent Words
+Word Clouds
+Monthly Review Trends
+🚀 Demo
+Positive Sentiment Prediction
 
-## 🚀 Live Features
+<p align="center"> <img src="images/positive_prediction.png" width="900"> </p>
 
-### 🔮 AI Sentiment Predictor
+Negative Sentiment Prediction
 
-Users can enter any product review and instantly receive:
+<p align="center"> <img src="images/negative_prediction.png" width="900"> </p>
 
-* Sentiment classification
-* Confidence score
-* Positive probability
-* Negative probability
-* Detailed prediction information
+Analytics Dashboard
 
-Example:
+<p align="center">
 
-Input:
+<img src="images/dashboard.png" width="48%"> <img src="images/analytics.png" width="48%">
 
-> Absolutely amazing product! The quality exceeded my expectations. Everything works perfectly and I highly recommend it.
+</p>
 
-Output:
-
-```
-Positive (100%)
-👍 Positive Probability: 100%
-```
-
----
-
-### 📊 Enterprise Analytics Dashboard
-
-The dashboard provides comprehensive insights from Amazon reviews:
-
-#### Key Performance Indicators
-
-* Total Reviews Count
-* Average Rating
-* Positive Sentiment Percentage
-* Average Review Length
-
-#### Visual Analytics
-
-Included visualizations:
-
-⭐ Star Rating Distribution
-
-👍 Positive vs Negative Sentiment Distribution
-
-📏 Review Length Analysis
-
-🔝 Most Frequent Words
-
-☁️ Positive & Negative Word Clouds
-
-📅 Monthly Review Trends
-
----
-
-## 🧠 Machine Learning Model
-
-### Fine-Tuned Model
-
-Model:
-
-```
-DistilBERT for Sequence Classification
-```
-
-Architecture:
-
-```
-Input Review Text
-        |
-        ↓
+🧠 Model Architecture
+Customer Review
+       │
+       ▼
 DistilBERT Tokenizer
-        |
-        ↓
+       │
+       ▼
 Fine-Tuned DistilBERT
-        |
-        ↓
-Softmax Classification
-        |
-        ↓
-Positive / Negative Sentiment
-```
+       │
+       ▼
+Softmax Layer
+       │
+       ▼
+Positive / Negative
+🎯 Model Performance
+Metric	Value
+Accuracy	95%+
+Framework	Hugging Face Transformers
+Backbone	DistilBERT
+Task	Binary Sentiment Classification
+🤗 Hugging Face Model
 
-Model Performance:
+The trained model is hosted on Hugging Face.
 
-```
-Accuracy: 95%+
-```
+Repository
 
----
-
-## 🤗 Model Hosting
-
-The trained model is hosted on Hugging Face:
-
-Model Repository:
-
-```
 FatmaEissa1/amazon-review-sentiment-distilbert
-```
 
-The Streamlit application automatically downloads the model during deployment.
+The application downloads the model automatically during deployment.
 
----
-
-## 🏗️ Project Structure
-
-```
-AMAZON-REVIEW-SENTIMENT-ANALYSIS
+🏗️ Project Structure
+Amazon-Review-Sentiment-Analysis
 │
-├── app.py                         # Streamlit Application
-├── requirements.txt               # Dependencies
+├── app.py
+├── requirements.txt
 ├── README.md
 │
 ├── data/
@@ -140,134 +93,76 @@ AMAZON-REVIEW-SENTIMENT-ANALYSIS
 ├── images/
 │   ├── positive_prediction.png
 │   ├── negative_prediction.png
-│   └── analytics_dashboard.png
+│   ├── dashboard.png
+│   └── analytics.png
 │
 └── notebooks/
     └── amazon-product-reviews.ipynb
-```
+🛠️ Tech Stack
+Programming
+Python
+Deep Learning
+PyTorch
+Transformers
+DistilBERT
+Hugging Face
+Data Processing
+Pandas
+NumPy
+Scikit-learn
+Visualization
+Plotly
+Matplotlib
+WordCloud
+Deployment
+Streamlit
+Hugging Face Hub
+⚙️ Installation
 
----
+Clone the repository
 
-## 🛠️ Technologies Used
+git clone https://github.com/FatmaEissa/Amazon-Review-Sentiment-Analysis.git
 
-### Programming
+Enter the project
 
-* Python
+cd Amazon-Review-Sentiment-Analysis
 
-### Machine Learning / NLP
+Create a virtual environment
 
-* PyTorch
-* Hugging Face Transformers
-* DistilBERT
-* Natural Language Processing
-
-### Data Analysis
-
-* Pandas
-* NumPy
-* Scikit-learn
-
-### Visualization
-
-* Plotly
-* Matplotlib
-* WordCloud
-
-### Deployment
-
-* Streamlit
-* Hugging Face Hub
-
----
-
-## ⚙️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/FatmaEissa1/AMAZON-REVIEW-SENTIMENT-ANALYSIS.git
-```
-
-Navigate to the project:
-
-```bash
-cd AMAZON-REVIEW-SENTIMENT-ANALYSIS
-```
-
-Create virtual environment:
-
-```bash
 python -m venv venv
-```
 
-Activate environment:
+Activate the environment
 
-Windows:
+Windows
 
-```bash
 venv\Scripts\activate
-```
 
-Install requirements:
+Install dependencies
 
-```bash
 pip install -r requirements.txt
-```
-
----
-
-## ▶️ Run Application
-
-Start Streamlit:
-
-```bash
+▶️ Run Locally
 streamlit run app.py
-```
+💡 Business Applications
+Customer feedback analysis
+Product review monitoring
+Customer satisfaction measurement
+Complaint detection
+Product quality improvement
+Business intelligence
+Decision support
+👩‍💻 Author
+Fatma Eissa
 
-The application will open automatically in your browser.
+AI Engineer • Machine Learning • NLP • Computer Vision
 
----
+GitHub
 
-## 📸 Application Screenshots
+https://github.com/FatmaEissa
 
-### 🔮 Positive Sentiment Prediction
+Hugging Face
 
-![Positive Prediction](images/positive_prediction.png)
+https://huggingface.co/FatmaEissa1
 
-### ❌ Negative Sentiment Prediction
+⭐ Support
 
-![Negative Prediction](images/negative_prediction.png)
-
-### 📊 Analytics Dashboard
-
-![Analytics Dashboard](images/analytics_dashboard.png)
-
----
-
-## 🎯 Business Applications
-
-This platform can help businesses:
-
-* Monitor customer satisfaction
-* Analyze product feedback
-* Detect customer complaints
-* Improve product quality
-* Support data-driven decisions
-
----
-
-## 👩‍💻 Author
-
-**Fatma Eissa**
-
-AI Engineer | Machine Learning | Computer Vision | NLP
-
-GitHub:
-
-```
-https://github.com/FatmaEissa1
-```
-
----
-
-⭐ If you find this project useful, consider giving it a star!
+If you found this project useful, please consider giving it a Star ⭐ on GitHub.
